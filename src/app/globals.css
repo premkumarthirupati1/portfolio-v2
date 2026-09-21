@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
-@theme inline {
+@theme {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-muted: var(--foreground-muted);
+  
+  --color-accent-iris: var(--accent-iris);
+  --color-accent-aurora: var(--accent-aurora);
+  
+  --color-border-subtle: var(--border-subtle);
+  
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space);
+  --font-mono: var(--font-jetbrains);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  /* Primary */
+  --background: #07090C; /* Void */
+  --background-secondary: #0D1117; /* Graphite */
+  --surface: #171C23; /* Titanium */
+  --surface-elevated: #1D2430; /* Elevated */
+
+  /* Typography */
+  --foreground: #F4F7FB; /* Pearl */
+  --foreground-secondary: #A7B0BD; /* Silver */
+  --foreground-muted: #66707D; /* Muted */
+
+  /* Accents */
+  --accent-iris: #7C6CFF; /* Electric Iris */
+  --accent-aurora: #55B8FF; /* Aurora Blue */
+
+  /* Borders */
+  --border-subtle: #252C36; /* Graphite Border */
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Ambient Background: extremely faint noise and grid */
+  background-image: 
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E"),
+    linear-gradient(to right, rgba(37, 44, 54, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 44, 54, 0.2) 1px, transparent 1px);
+  background-size: 200px 200px, 100px 100px, 100px 100px;
+  background-position: 0 0, center center, center center;
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+/* Page Load Animation (Phase 1 Ambient) */
+@keyframes ambientFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#root-content {
+  animation: ambientFadeIn 1s ease-in-out forwards;
+}
+
+/* Scrollbar customization for a cleaner look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground-muted); 
 }
