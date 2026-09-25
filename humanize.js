@@ -1,4 +1,32 @@
-export const profile = {
+const fs = require('fs');
+
+// 1. Update about.tsx
+let about = fs.readFileSync('src/components/about.tsx', 'utf8');
+
+const oldAboutText = `<div className="text-lg md:text-xl text-foreground/90 leading-relaxed font-light space-y-6">
+                <p>
+                  My foundation in Computer Science is built on a deep curiosity for how complex systems operate under the hood. I am driven by the process of taking an abstract problem, designing a scalable architecture, and engineering a practical, real-world application to solve it.
+                </p>
+                <p>
+                  I focus heavily on building resilient backend architectures, integrating AI/ML models into functional platforms, and maintaining a relentless approach to algorithmic problem-solving. Code is just a tool; the goal is always execution and impact.
+                </p>
+              </div>`;
+
+const newAboutText = `<div className="text-lg md:text-xl text-foreground/90 leading-relaxed font-light space-y-6">
+                <p>
+                  My foundation in Computer Science is built on a genuine curiosity about how complex systems operate under the hood. I am driven by the process of taking an abstract idea, designing a scalable architecture, and building a practical application to solve the problem.
+                </p>
+                <p>
+                  I focus heavily on building resilient backend architectures and integrating AI models into functional platforms. I also maintain a relentless approach to algorithmic problem solving. To me, code is simply a tool. The ultimate goal is always delivering impact and finding the right solution.
+                </p>
+              </div>`;
+
+about = about.replace(oldAboutText, newAboutText);
+fs.writeFileSync('src/components/about.tsx', about);
+
+
+// 2. Update profile.ts
+const profileContent = `export const profile = {
   name: "Prem Kumar",
   role: "SOFTWARE DEVELOPER",
   headline: "Building thoughtful software that solves real problems.",
@@ -97,3 +125,8 @@ export const profile = {
     }
   ]
 };
+`;
+
+fs.writeFileSync('src/data/profile.ts', profileContent);
+
+console.log('Humanized and removed semicolons');
