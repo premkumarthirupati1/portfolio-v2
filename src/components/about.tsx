@@ -9,13 +9,14 @@ export function About() {
   return (
     <section id="about" className="py-32 border-b border-border-subtle">
       <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-16 lg:gap-24">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-16 lg:gap-24">
             
             {/* Left Side: Original Text (Max Width to match exactly how it was before) */}
             <div className="lg:col-span-7">
@@ -93,7 +94,8 @@ export function About() {
               </div>
             </div>
           </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
