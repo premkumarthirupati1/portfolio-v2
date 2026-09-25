@@ -1,4 +1,6 @@
+const fs = require('fs');
 
+const content = `
 "use client";
 
 import { motion } from "framer-motion";
@@ -99,3 +101,6 @@ export function About() {
     </section>
   );
 }
+`;
+
+fs.writeFileSync('src/components/about.tsx', content);
