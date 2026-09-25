@@ -6,8 +6,8 @@ import { ArrowRight } from "lucide-react";
 import { TextReveal } from "@/components/ui/text-reveal";
 
 export function Projects() {
-  const featuredProject = profile.projects[1]; // Deepfake Detection System (using as DermaTrace analogue)
-  const remainingProjects = [profile.projects[0], profile.projects[2]];
+  const featuredProject = profile.projects[0]; // SkillForge
+  const remainingProjects = [profile.projects[1], profile.projects[2]];
 
   return (
     <section id="projects" className="py-32 border-b border-border-subtle bg-background">
@@ -23,7 +23,7 @@ export function Projects() {
             className="mb-12 flex flex-col md:flex-row md:items-end justify-between border-b border-border-subtle pb-8"
           >
             <div>
-              <div className="text-xs font-mono uppercase tracking-[0.3em] text-foreground-muted mb-4">
+              <div className="text-xs font-mono uppercase tracking-[0.3em] text-foreground/90 mb-4">
                 01 / Featured Work
               </div>
               <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tight text-foreground">
@@ -52,7 +52,7 @@ export function Projects() {
                    <div className="w-2 h-2 rounded-full bg-border-subtle"></div>
                  </div>
                  <div className="flex-1 bg-background relative flex items-center justify-center">
-                    <span className="font-mono text-xs text-foreground-muted">PREVIEW: {featuredProject.title.toUpperCase()}</span>
+                    <span className="font-mono text-xs text-foreground/90">PREVIEW: {featuredProject.title.toUpperCase()}</span>
                  </div>
                </div>
             </div>
@@ -67,12 +67,12 @@ export function Projects() {
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="col-span-1">
-              <div className="text-xs font-mono tracking-[0.2em] text-foreground-muted mb-2 uppercase">The Problem</div>
-              <p className="text-foreground-secondary font-light text-sm">{featuredProject.problem}</p>
+              <div className="text-xs font-mono tracking-[0.2em] text-foreground/90 mb-2 uppercase">The Problem</div>
+              <p className="text-foreground/90 font-light text-sm">{featuredProject.problem}</p>
             </div>
             <div className="col-span-2">
-              <div className="text-xs font-mono tracking-[0.2em] text-foreground-muted mb-2 uppercase">Solution & Impact</div>
-              <p className="text-foreground-secondary font-light text-sm mb-4">{featuredProject.description}</p>
+              <div className="text-xs font-mono tracking-[0.2em] text-foreground/90 mb-2 uppercase">Solution & Impact</div>
+              <p className="text-foreground/90 font-light text-sm mb-4">{featuredProject.description}</p>
               <a href="#" className="inline-flex items-center gap-2 text-xs font-bold font-mono tracking-widest text-foreground hover:text-accent-iris transition-colors group">
                 VIEW FULL CASE STUDY <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </a>
@@ -82,7 +82,7 @@ export function Projects() {
 
         {/* Alternating Selected Projects */}
         <div className="space-y-48">
-          <div className="text-xs font-mono uppercase tracking-[0.3em] text-foreground-muted border-b border-border-subtle pb-4 mb-24">
+          <div className="text-xs font-mono uppercase tracking-[0.3em] text-foreground/90 border-b border-border-subtle pb-4 mb-24">
             02 / Selected Projects
           </div>
 
@@ -105,7 +105,7 @@ export function Projects() {
                     transition={{ duration: 0.5 }}
                     className="w-full h-full border border-border-subtle relative flex items-center justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-surface-elevated to-surface"
                   >
-                    <span className="font-mono text-xs text-foreground-muted opacity-50">VISUAL: {project.title.toUpperCase()}</span>
+                    <span className="font-mono text-xs text-foreground/90 opacity-50">VISUAL: {project.title.toUpperCase()}</span>
                   </motion.div>
                 </div>
 
@@ -119,7 +119,7 @@ export function Projects() {
                     {project.title}
                   </h3>
                   
-                  <p className="text-foreground-secondary font-light leading-relaxed mb-8">
+                  <p className="text-foreground/90 font-light leading-relaxed mb-8">
                     {project.description}
                   </p>
 
@@ -127,7 +127,7 @@ export function Projects() {
                     {project.techStack.map(tech => (
                       <span 
                         key={tech} 
-                        className="text-xs font-mono tracking-wider text-foreground-muted border border-border-subtle px-3 py-1.5 rounded-sm bg-background-secondary"
+                        className="text-xs font-mono tracking-wider text-foreground/90 border border-border-subtle px-3 py-1.5 rounded-sm bg-background-secondary"
                       >
                         {tech}
                       </span>

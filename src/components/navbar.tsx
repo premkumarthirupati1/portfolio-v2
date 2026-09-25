@@ -19,8 +19,8 @@ export function Navbar() {
       className="fixed top-0 w-full z-50 bg-background/70 backdrop-blur-xl border-b border-border-subtle transition-all duration-300"
     >
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-        <RollLink href="#" className="font-heading text-xl font-bold tracking-tighter text-foreground">
-          PK
+        <RollLink href="#" className="font-heading text-xl font-bold tracking-tight text-foreground">
+          Prem Kumar.
         </RollLink>
         
         <nav className="hidden md:flex gap-8">
@@ -28,7 +28,7 @@ export function Navbar() {
             <RollLink 
               key={item.name} 
               href={item.href}
-              className="text-xs uppercase tracking-[0.2em] font-semibold text-foreground-secondary"
+              className="text-xs uppercase tracking-[0.2em] font-semibold text-foreground/90"
             >
               {item.name}
             </RollLink>

@@ -15,14 +15,14 @@ export function Contact() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <div className="text-xs font-mono uppercase tracking-[0.3em] text-foreground-muted mb-8">
+          <div className="text-xs font-mono uppercase tracking-[0.3em] text-foreground/90 mb-8">
             06 — Contact
           </div>
           <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter text-foreground mb-8">
             Let's build something <br className="hidden md:block"/>
             <span className="text-accent">meaningful.</span>
           </h2>
-          <p className="text-xl md:text-2xl text-foreground-secondary font-light max-w-2xl mx-auto mb-16">
+          <p className="text-xl md:text-2xl text-foreground/90 font-light max-w-2xl mx-auto mb-16">
             Have an opportunity, project, or interesting problem? I'd love to hear about it.
           </p>
 

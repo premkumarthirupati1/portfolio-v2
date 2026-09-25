@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Sora, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { CustomCursor } from "@/components/ui/custom-cursor";
@@ -33,18 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${sora.variable} ${jetbrainsMono.variable}`}>
-      <body className="min-h-screen bg-background antialiased selection:bg-accent/20 selection:text-accent cursor-none">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          forcedTheme="dark"
-          disableTransitionOnChange
-        >
-          <SmoothScroll>
-            <CustomCursor />
-            {children}
-          </SmoothScroll>
-        </ThemeProvider>
+      <body className="min-h-screen bg-background antialiased selection:bg-accent-iris/20 selection:text-accent-iris cursor-none">
+        <SmoothScroll>
+          <CustomCursor />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

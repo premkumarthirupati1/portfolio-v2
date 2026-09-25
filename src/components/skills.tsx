@@ -23,7 +23,7 @@ export function Skills() {
           transition={{ duration: 0.8 }}
           className="mb-20 max-w-2xl"
         >
-          <div className="text-xs font-mono uppercase tracking-[0.3em] text-foreground-muted mb-8">
+          <div className="text-xs font-mono uppercase tracking-[0.3em] text-foreground/90 mb-8">
             04 — Technical Stack
           </div>
           <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
@@ -45,7 +45,7 @@ export function Skills() {
               </h3>
               <ul className="space-y-4">
                 {category.items.map(item => (
-                  <li key={item} className="text-foreground-secondary font-light tracking-wide">
+                  <li key={item} className="text-foreground/90 font-light tracking-wide">
                     {item}
                   </li>
                 ))}

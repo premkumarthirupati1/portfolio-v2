@@ -15,7 +15,7 @@ export function Timeline() {
           transition={{ duration: 0.8 }}
           className="mb-20 max-w-2xl mx-auto text-center"
         >
-          <div className="text-xs font-mono uppercase tracking-[0.3em] text-foreground-muted mb-8">
+          <div className="text-xs font-mono uppercase tracking-[0.3em] text-foreground/90 mb-8">
             05 — Journey
           </div>
           <h2 className="font-heading text-4xl font-bold tracking-tight text-foreground">
@@ -48,7 +48,7 @@ export function Timeline() {
               <div className="bg-background px-4 font-heading text-4xl md:text-5xl font-bold text-foreground mb-6 group-hover:text-accent transition-colors duration-500">
                 {item.year}
               </div>
-              <p className="bg-background px-4 text-foreground-secondary font-light leading-relaxed max-w-md">
+              <p className="bg-background px-4 text-foreground/90 font-light leading-relaxed max-w-md">
                 {item.description}
               </p>
               
