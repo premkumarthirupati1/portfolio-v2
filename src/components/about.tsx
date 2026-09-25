@@ -15,7 +15,7 @@ export function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="flex flex-col lg:flex-row justify-between items-start gap-16">
+          <div className="flex flex-col lg:flex-row items-start gap-12">
             
             {/* Left Side: Original Text (Max Width to match exactly how it was before) */}
             <div className="w-full lg:max-w-3xl">
@@ -38,7 +38,7 @@ export function About() {
             </div>
 
             {/* Right Side: The GIF (Pushed completely to the end) */}
-            <div className="w-full lg:w-96 flex-shrink-0 mt-12 lg:mt-24 lg:ml-auto">
+            <div className="w-full lg:w-96 flex-shrink-0 mt-12 lg:mt-24">
               <div className="relative aspect-square w-full rounded-2xl overflow-hidden border border-border-subtle shadow-[0_0_40px_rgba(124,108,255,0.05)] group">
                 
                 <Image 

@@ -142,7 +142,7 @@ export function Hero() {
                 </div>
                 <div>
                   <div className="font-heading text-xl font-bold text-foreground">
-                    <RollingNumber value={8.86} decimals={2} />
+                    8.86
                   </div>
                   <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-foreground/90 mt-0.5">CGPA</div>
                 </div>
