@@ -55,7 +55,7 @@ export function Hero() {
         }}
       ></div>
 
-      <div className="container mx-auto px-6 relative z-10 flex-grow flex flex-col justify-center pb-24">
+      <div className="max-w-7xl mx-auto px-6 relative z-10 flex-grow flex flex-col justify-center pb-24">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-12 pt-12">
           
           {/* Left Side: Typography */}

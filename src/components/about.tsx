@@ -8,7 +8,7 @@ import Image from "next/image";
 export function About() {
   return (
     <section id="about" className="py-32 border-b border-border-subtle relative overflow-hidden">
-      <div className="container mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           

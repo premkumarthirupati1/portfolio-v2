@@ -15,7 +15,7 @@ export function Skills() {
 
   return (
     <section id="skills" className="py-32 border-b border-border-subtle bg-surface-elevated/20">
-      <div className="container mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

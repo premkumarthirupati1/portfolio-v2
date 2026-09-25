@@ -18,7 +18,7 @@ export function Navbar() {
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className="fixed top-0 w-full z-50 bg-background/70 backdrop-blur-xl border-b border-border-subtle transition-all duration-300"
     >
-      <div className="container mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <RollLink href="#" className="font-heading text-xl font-bold tracking-tight text-foreground">
           Prem Kumar.
         </RollLink>

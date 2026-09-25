@@ -11,7 +11,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="py-32 border-b border-border-subtle bg-background">
-      <div className="container mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
         
         {/* Featured Project */}
         <div className="mb-48">

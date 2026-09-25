@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export function Currently() {
   return (
     <section className="py-24 border-b border-border-subtle bg-background relative overflow-hidden">
-      <div className="container mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
