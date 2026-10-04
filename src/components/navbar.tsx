@@ -43,7 +43,7 @@ export function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className={\`fixed top-0 w-full z-50 transition-all duration-300 \${scrolled || isMobileMenuOpen ? 'bg-background/90 backdrop-blur-xl border-b border-border-subtle' : 'bg-transparent'}\`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled || isMobileMenuOpen ? 'bg-background/90 backdrop-blur-xl border-b border-border-subtle' : 'bg-transparent'}`}
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <RollLink href="#" className="font-heading text-xl font-bold tracking-tight text-foreground relative z-50">
