@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { profile } from "@/data/profile";
-import { ArrowRight, ArrowDown, GraduationCap, Code2 } from "lucide-react";
+import { ArrowRight, ArrowDown, FolderGit2, Code2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useMotionValue, useSpring, useMotionTemplate } from "framer-motion";
 import Image from "next/image";
