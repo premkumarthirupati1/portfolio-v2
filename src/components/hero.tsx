@@ -139,13 +139,13 @@ export function Hero() {
             >
               <div className="flex items-center gap-4">
                 <div className="flex items-center justify-center w-12 h-12 rounded-full border border-border-subtle bg-surface/30">
-                  <GraduationCap className="w-5 h-5 text-foreground/90" />
+                  <FolderGit2 className="w-5 h-5 text-foreground/90" />
                 </div>
                 <div>
                   <div className="font-heading text-xl font-bold text-foreground">
-                    8.86
+                    <div className="flex items-center"><RollingNumber value={3} /><span className="text-accent-iris ml-1">+</span></div>
                   </div>
-                  <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-foreground/90 mt-0.5">CGPA</div>
+                  <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-foreground/90 mt-0.5">Projects Built</div>
                 </div>
               </div>
 
