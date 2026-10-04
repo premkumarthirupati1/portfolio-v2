@@ -143,7 +143,7 @@ export function Hero() {
                 </div>
                 <div>
                   <div className="font-heading text-xl font-bold text-foreground">
-                    <div className="flex items-center"><RollingNumber value={3} /><span className="text-accent-iris ml-1">+</span></div>
+                    <div className="flex items-center"><RollingNumber value={5} /><span className="text-accent-iris ml-1">+</span></div>
                   </div>
                   <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-foreground/90 mt-0.5">Projects Built</div>
                 </div>
