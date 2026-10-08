@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { profile } from "@/data/profile";
 import { ArrowRight } from "lucide-react";
 import { TextReveal } from "@/components/ui/text-reveal";
+import Image from "next/image";
 
 export function Projects() {
   const featuredProject = profile.projects[0]; // SkillForge
@@ -105,7 +106,7 @@ export function Projects() {
                     transition={{ duration: 0.5 }}
                     className="w-full h-full border border-border-subtle relative flex items-center justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-surface-elevated to-surface"
                   >
-                    <span className="font-mono text-xs text-foreground/90 opacity-50">VISUAL: {project.title.toUpperCase()}</span>
+                    <Image src={projectImage} alt={project.title} fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
                   </motion.div>
                 </div>
 
