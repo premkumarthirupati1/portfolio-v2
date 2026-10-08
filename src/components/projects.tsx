@@ -89,6 +89,7 @@ export function Projects() {
 
           {remainingProjects.map((project, index) => {
             const isImageLeft = index % 2 === 0;
+            const projectImage = index === 0 ? '/deepfake.jpg' : '/ecommerce.jpg';
 
             return (
               <motion.div
