@@ -52,9 +52,7 @@ export function Projects() {
                    <div className="w-2 h-2 rounded-full bg-border-subtle"></div>
                    <div className="w-2 h-2 rounded-full bg-border-subtle"></div>
                  </div>
-                 <div className="flex-1 bg-background relative flex items-center justify-center">
-                    <span className="font-mono text-xs text-foreground/90">PREVIEW: {featuredProject.title.toUpperCase()}</span>
-                 </div>
+                 <div className="flex-1 bg-background relative flex items-center justify-center overflow-hidden"><Image src="/skillforge.jpg" alt="SkillForge Dashboard" fill className="object-cover" /></div>
                </div>
             </div>
 
@@ -153,3 +151,4 @@ export function Projects() {
     </section>
   );
 }
+
