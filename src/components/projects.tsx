@@ -45,16 +45,7 @@ export function Projects() {
           >
             {/* Cinematic visual placeholder */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-surface-elevated to-surface opacity-80"></div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
-               <div className="w-full max-w-4xl h-full border border-border-subtle/50 flex flex-col shadow-2xl transition-transform duration-700 ease-out group-hover:scale-[1.035]">
-                 <div className="h-8 bg-surface-elevated border-b border-border-subtle flex items-center px-4 gap-2">
-                   <div className="w-2 h-2 rounded-full bg-border-subtle"></div>
-                   <div className="w-2 h-2 rounded-full bg-border-subtle"></div>
-                   <div className="w-2 h-2 rounded-full bg-border-subtle"></div>
-                 </div>
-                 <div className="flex-1 bg-background relative flex items-center justify-center overflow-hidden"><Image src="/skillforge.jpg" alt="SkillForge Dashboard" fill className="object-cover" /></div>
-               </div>
-            </div>
+            <Image src="/skillforge.jpg" alt="SkillForge Dashboard" fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]" />
 
             {/* Custom overlay on hover (simulated via CSS since actual cursor is globally handled) */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
@@ -151,4 +142,5 @@ export function Projects() {
     </section>
   );
 }
+
 
