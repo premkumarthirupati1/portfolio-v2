@@ -33,7 +33,7 @@ export const profile = {
       techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Redis"],
       impact: "Reduced API latency by 30% and cut MongoDB query time by 25%.",
       github: "https://github.com/premkumarthirupati1",
-      demo: "",
+      demo: "https://skillforge-frontend-aijn.vercel.app/",
     },
     {
       title: "Deepfake Detection System",

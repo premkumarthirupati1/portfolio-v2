@@ -36,12 +36,15 @@ export function Projects() {
             </div>
           </motion.div>
 
-          <motion.div
+          <motion.a
+            href={featuredProject.demo || featuredProject.github}
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ scale: 0.88, opacity: 0, borderRadius: "24px" }}
             whileInView={{ scale: 1, opacity: 1, borderRadius: "0px" }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full aspect-[16/9] bg-surface relative overflow-hidden group cursor-none"
+            className="block w-full aspect-[16/9] bg-surface relative overflow-hidden group cursor-pointer"
           >
             {/* Cinematic visual placeholder */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-surface-elevated to-surface opacity-80"></div>
@@ -50,10 +53,10 @@ export function Projects() {
             {/* Custom overlay on hover (simulated via CSS since actual cursor is globally handled) */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
               <div className="w-32 h-32 rounded-full bg-foreground text-background flex items-center justify-center font-bold text-xs tracking-widest uppercase shadow-2xl scale-50 group-hover:scale-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
-                Case Study ↗
+                Live App ↗
               </div>
             </div>
-          </motion.div>
+          </motion.a>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="col-span-1">
@@ -63,9 +66,26 @@ export function Projects() {
             <div className="col-span-2">
               <div className="text-xs font-mono tracking-[0.2em] text-foreground/90 mb-2 uppercase">Solution & Impact</div>
               <p className="text-foreground/90 font-light text-sm mb-4">{featuredProject.description}</p>
-              <a href="#" className="inline-flex items-center gap-2 text-xs font-bold font-mono tracking-widest text-foreground hover:text-accent-iris transition-colors group">
-                VIEW FULL CASE STUDY <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-              </a>
+              <div className="flex flex-wrap items-center gap-4">
+                {featuredProject.demo && (
+                  <a 
+                    href={featuredProject.demo} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-2 text-xs font-bold font-mono tracking-widest px-4 py-2 border border-accent-iris bg-accent-iris/10 text-accent-iris hover:bg-accent-iris hover:text-background transition-colors group"
+                  >
+                    LIVE DEMO <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                  </a>
+                )}
+                <a 
+                  href={featuredProject.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center gap-2 text-xs font-bold font-mono tracking-widest text-foreground hover:text-accent-iris transition-colors group"
+                >
+                  VIEW REPOSITORY <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
