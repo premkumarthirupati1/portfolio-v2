@@ -32,7 +32,7 @@ export function Projects() {
               </h2>
             </div>
             <div className="mt-6 md:mt-0 text-sm font-mono tracking-widest text-accent-iris uppercase">
-              {featuredProject.techStack.slice(0, 3).join(" • ")}
+              {featuredProject.techStack.slice(0, 4).join(" • ")}
             </div>
           </motion.div>
 
@@ -65,7 +65,17 @@ export function Projects() {
             </div>
             <div className="col-span-2">
               <div className="text-xs font-mono tracking-[0.2em] text-foreground/90 mb-2 uppercase">Solution & Impact</div>
-              <p className="text-foreground/90 font-light text-sm mb-4">{featuredProject.description}</p>
+              <p className="text-foreground/90 font-light text-sm mb-6">{featuredProject.description}</p>
+              <div className="flex flex-wrap gap-2 mb-8">
+                {featuredProject.techStack.map(tech => (
+                  <span 
+                    key={tech} 
+                    className="text-xs font-mono tracking-wider text-foreground/90 border border-border-subtle px-3 py-1.5 rounded-sm bg-background-secondary"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
               <div className="flex flex-wrap items-center gap-4">
                 {featuredProject.demo && (
                   <a 

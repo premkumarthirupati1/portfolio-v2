@@ -82,7 +82,7 @@ export function Hero() {
                 className="text-xs font-mono uppercase tracking-[0.2em] text-accent-iris flex items-center gap-4"
               >
                 <span className="w-4 h-px bg-accent-iris"></span>
-                Software Developer • Builder • Problem Solver
+                Software Developer & AI Engineer • Problem Solver
               </motion.div>
             </div>
             
